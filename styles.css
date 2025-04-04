@@ -1,0 +1,141 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 头部样式 */
+header {
+    margin-bottom: 30px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+.profile-info h1 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.profile-info .title {
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+/* 导航栏样式 */
+nav {
+    background-color: #2c3e50;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #3498db;
+    border-radius: 3px;
+}
+
+/* 主要内容区域 */
+main {
+    padding: 20px 0;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #3498db;
+    margin: 15px 0 10px 0;
+}
+
+/* 论文列表样式 */
+.pub-list, .course-list {
+    padding-left: 20px;
+}
+
+.pub-list li, .course-list li {
+    margin-bottom: 15px;
+}
+
+.pub-list strong, .course-list strong {
+    color: #2c3e50;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    color: #7f8c8d;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin-bottom: 10px;
+    }
+}
