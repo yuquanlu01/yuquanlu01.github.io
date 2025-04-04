@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>陆毓泉 - 个人学术主页</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -13,10 +14,13 @@
                 <img src="profile.jpg" alt="个人照片" class="profile-img">
                 <div class="profile-info">
                     <h1>陆毓泉</h1>
-                    <p class="title"></p>
-                    <p></p>
-                    <p></p>
-                    <p>Email: your.email@example.com</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> your.email@example.com</p>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-google"></i> Google Scholar</a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <nav>
@@ -31,25 +35,105 @@
         <main>
             <section id="bio">
                 <h2>简介</h2>
-                <p>
-
-                </p>
+                <div class="bio-content">
+                    <p>
+                        这里是您的个人简介。您可以描述您的教育背景、研究兴趣和学术经历。
+                    </p>
+                </div>
             </section>
 
             <section id="research">
                 <h2>研究方向</h2>
-                <ul>
-
-                </ul>
+                <div class="research-areas">
+                    <div class="research-item">
+                        <i class="fas fa-microscope"></i>
+                        <h3>研究方向1</h3>
+                        <p>简要描述这一研究方向的内容和您的贡献。</p>
+                    </div>
+                    <div class="research-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>研究方向2</h3>
+                        <p>简要描述这一研究方向的内容和您的贡献。</p>
+                    </div>
+                    <div class="research-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>研究方向3</h3>
+                        <p>简要描述这一研究方向的内容和您的贡献。</p>
+                    </div>
+                </div>
             </section>
 
             <section id="publications">
                 <h2>发表论文</h2>
+                <div class="publications-wrapper">
+                    <div class="publication-filters">
+                        <button class="filter active" data-filter="all">全部</button>
+                        <button class="filter" data-filter="journal">期刊论文</button>
+                        <button class="filter" data-filter="conference">会议论文</button>
+                    </div>
+                    
+                    <div class="publications-list">
+                        <div class="publication-item journal">
+                            <div class="pub-year">2024</div>
+                            <div class="pub-content">
+                                <p class="pub-title">论文标题1</p>
+                                <p class="pub-authors"><strong>陆毓泉</strong>, 合著者2, 合著者3</p>
+                                <p class="pub-journal"><em>期刊名称</em>, 卷(期), 页码</p>
+                                <div class="pub-links">
+                                    <a href="#" target="_blank">[PDF]</a>
+                                    <a href="#" target="_blank">[DOI]</a>
+                                    <a href="#" target="_blank">[代码]</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-item conference">
+                            <div class="pub-year">2023</div>
+                            <div class="pub-content">
+                                <p class="pub-title">会议论文标题1</p>
+                                <p class="pub-authors"><strong>陆毓泉</strong>, 合著者2</p>
+                                <p class="pub-journal"><em>会议名称</em>, 地点</p>
+                                <div class="pub-links">
+                                    <a href="#" target="_blank">[PDF]</a>
+                                    <a href="#" target="_blank">[幻灯片]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer>
-            <p>&copy; 2025 yuquanlu. 最后更新: 2025年4月.</p>
+            <p>&copy; 2025 陆毓泉 (Yuquan Lu). 最后更新: 2025年4月.</p>
         </footer>
     </div>
+
+    <script>
+        // 简单的论文过滤功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter');
+            const publicationItems = document.querySelectorAll('.publication-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // 更新按钮状态
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 过滤论文
+                    publicationItems.forEach(item => {
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            item.style.display = 'flex';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
