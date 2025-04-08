@@ -119,7 +119,9 @@
             
             .profile-image {
                 width: 180px;
-                height: 180px;
+                height: auto;
+                object-fit: contain;
+                max-height: 250px;
             }
         }
     </style>
@@ -127,7 +129,7 @@
 <body>
     <!-- Profile section -->
     <div class="profile">
-        <img src="/api/placeholder/200/200" alt="Profile Photo" class="profile-image">
+        <img src="Profile.jpg" alt="Yuquan Lu" class="profile-image">
         <div class="profile-info">
             <h1>Yuquan Lu(陆毓泉)</h1>
             <p>Pending Enrollment Master's Student</p>
