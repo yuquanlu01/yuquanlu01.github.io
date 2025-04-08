@@ -1,85 +1,195 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>陆毓泉 - 个人学术主页</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Yuquan Lu</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            background-color: #f9f9f9;
+        }
+        
+        /* Profile section */
+        .profile {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            align-items: flex-start;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        
+        .profile-info h1 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 2.2rem;
+            font-weight: 500;
+        }
+        
+        .profile-info p {
+            margin-top: 0;
+            color: #555;
+        }
+        
+        /* Content sections */
+        section {
+            margin-bottom: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        ul {
+            padding-left: 1.2rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Timeline styles */
+        .timeline-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .timeline-item .date {
+            font-weight: 500;
+            color: #666;
+            margin-bottom: 0.2rem;
+        }
+        
+        .timeline-item .title {
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+        }
+        
+        .timeline-item .description {
+            color: #555;
+        }
+        
+        /* Contact info */
+        .contact-info {
+            margin-top: 0.5rem;
+            color: #555;
+        }
+        
+        .contact-info a {
+            color: #2a7ae2;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .profile {
+                flex-direction: column;
+            }
+            
+            .profile-image {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="profile">
-                <img src="profile.jpg" alt="个人照片" class="profile-img">
-                <div class="profile-info">
-                    <h1>陆毓泉</h1>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> yuquanlu01@gmail.com</p>
-                        <div class="social-links">
-                            <a href="#" target="_blank"><i class="fab fa-google"></i> Google Scholar</a>
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
+    <!-- Profile section -->
+    <div class="profile">
+        <img src="/api/placeholder/200/200" alt="Profile Photo" class="profile-image">
+        <div class="profile-info">
+            <h1>Yuquan Lu(陆毓泉)</h1>
+            <p>Pending Enrollment Master's Student</p>
+            <p>Shenzhen University/College of Computer Science and Software Engineering</p>
+            <div class="contact-info">
+                <p>📧 <a href="mailto:your.email@example.com">yuquanlu01@gmail.com</a></p>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#bio">简介</a></li>
-                    <li><a href="#research">研究方向</a></li>
-                    <li><a href="#publications">发表论文</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <section id="bio">
-                <h2>简介</h2>
-                <div class="bio-content">
-                    <p>
-                        
-                    </p>
-                </div>
-            </section>
-
-            <section id="research">
-                <h2>研究方向(待定)</h2>
-                <div class="research-areas">
-                    <div class="research-item">
-                        <i class="fas fa-microscope"></i>
-                        <h3>研究方向1</h3>
-                        <p></p>
-                    </div>
-                    <div class="research-item">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>研究方向2</h3>
-                        <p></p>
-                    </div>
-                    <div class="research-item">
-                        <i class="fas fa-project-diagram"></i>
-                        <h3>研究方向3</h3>
-                        <p></p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="publications">
-                <h2>发表论文</h2>
-                <div class="publications-wrapper">
-                    <div class="coming-soon">
-                        <i class="fas fa-hourglass-half"></i>
-                        <p>敬请期待！</p>
-                        <p class="coming-soon-subtitle">研究工作正在进行中...</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 陆毓泉 (Yuquan Lu). 最后更新: 2025年4月.</p>
-        </footer>
+        </div>
     </div>
+    
+    <!-- About section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am an incoming graduate student at Shenzhen University, where I will be conducting research on edge intelligence under the supervision of Professor Zhou Qihua. My research interests focus on LLM Serving and On-Device Machine Learning, exploring efficient ways to deploy and optimize large language models and machine learning algorithms on resource-constrained edge devices.</p>
+        <p>During my undergraduate studies at Shanxi University, I developed a strong foundation in Computer Science with a particular emphasis on Data Mining and Machine Learning. This academic background has fostered my passion for deep learning technologies and their real-world applications.</p>
+        <p>I look forward to contributing to the rapidly evolving field of edge intelligence and exploring innovative solutions that bridge the gap between powerful AI models and their deployment in everyday devices.</p>>
+    </section>
+    
+    <!-- Education section -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="timeline-item">
+            <div class="date">2020 - 2024</div>
+            <div class="title">B.Eng. in Data Science and Big Data Technology</div>
+            <div class="description">Shanxi University, Taiyuan, China</div>
+            <div class="description">Relevant Coursework: Machine Learning, Data Mining, Computer Science Fundamentals, Deep Learning</div>
+        </div>
+    </section>
+    
+    <!-- Research Experience section -->
+    <section id="research">
+        <h2>Research Experience</h2>
+        <div class="timeline-item">
+            <div class="date">Dec 2023 - Apr 2024</div>
+            <div class="title">Undergraduate Thesis: News Classification Algorithms Based on Deep Learning</div>
+            <div class="description">
+                <p>Shanxi University</p>
+                <p>• Built and compared news classification models combining BERT with TextCNN and BiLSTM architectures.</p>
+                <p>• Evaluated models on THUCNews dataset, analyzing performance differences between Word2vec, BERT, and hybrid approaches.</p>
+            </div>
+        </div>
 
-    <!-- 移除了论文过滤功能脚本 -->
+        <div class="timeline-item">
+            <div class="date">Jun 2022 - May 2023</div>
+            <div class="title">Innovation Training Program: Event Subject and Element Extraction in Financial Texts</div>
+            <div class="description">
+                <p>Shanxi University</p>
+                <p>• Implemented the CASEE joint learning framework for financial text event extraction.</p>
+                <p>• Developed a financial text element extraction system using Django.</p>
+                <p>• Improved extraction accuracy for overlapping events in complex financial scenarios.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Research Interests section -->
+    <section id="interests">
+        <h2>Research Interests</h2>
+        <ul>
+            <li>Efficient MoE/LLM Serving</li>
+            <li>Tiny/On-Device Machine Learning</li>
+        </ul>
+    </section>
+    
+    <!-- Contact section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>📧 Email: <a href="mailto:yuquanlu01@gmail.com">yuquanlu01@gmail.com</a></p>
+        <p>🏢 Address: YingTan,JangXi</p>
+        <p>💻 GitHub: <a href="https://github.com/yuquanlu01" target="_blank">github.com/yuquanlu01</a></p>
+    </section>
+    
+    <!-- Footer -->
+    <footer style="text-align: center; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #eee; color: #777; font-size: 0.9rem;">
+        <p>Last updated: April 2025</p>
+    </footer>
 </body>
 </html>
